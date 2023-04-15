@@ -11,6 +11,7 @@ const Expenses = (props) => {
 
   const filterChangeHandler = selectedYear => {
     setFilteredYear(selectedYear);
+    props.onSetYear(selectedYear)
   };
   return (
     <Card className="expenses">
