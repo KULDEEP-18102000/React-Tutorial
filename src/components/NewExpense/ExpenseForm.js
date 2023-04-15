@@ -6,7 +6,7 @@ const ExpenseForm = () => {
 
     const [enteredTitle,setTitle]=useState("")
     const [enteredAmount,setAmount]=useState(0)
-    const [enteredData,setDate]=useState(null)
+    const [enteredDate,setDate]=useState(null)
 
     const changeTitleFunction=(e)=>{
         console.log(e.target.name)
@@ -22,8 +22,19 @@ const ExpenseForm = () => {
         }
     }
 
+    const submitFunction=(e)=>{
+        e.preventDefault()
+        const obj={
+            title:enteredTitle,
+            amount:enteredAmount,
+            date:new Date(enteredDate) 
+        }
+
+        console.log(obj)
+    }
+
   return (
-    <form>
+    <form onSubmit={submitFunction}>
       <div className='new-expense__controls'>
         <div className='new-expense__control'>
           <label>Title</label>
