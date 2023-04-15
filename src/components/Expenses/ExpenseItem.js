@@ -2,7 +2,7 @@ import ExpenseDate from './ExpenseDate.js';
 import './ExpenseItem.css';
 // import ExpenseDetails from './ExpenseDetails.js';
 import ExpenseDetails from './ExpenseDetails.js';
-import Card from './Card.js';
+import Card from '../UI/Card.js';
 
 function ExpenseItem(props) {
   console.log(props.title)
