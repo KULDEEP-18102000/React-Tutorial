@@ -42,12 +42,12 @@ const App = () => {
     console.log(expenses)
   }
 
-  const setYearHandler=(year)=>{
-    const currentYearExpenses=expenses.filter(item=>{
-      return item.date.getFullYear()==year
-    })
-    setExpenses(currentYearExpenses)
-  }
+  // const setYearHandler=(year)=>{
+  //   const currentYearExpenses=expenses.filter(item=>{
+  //     return item.date.getFullYear()==year
+  //   })
+  //   setExpenses(currentYearExpenses)
+  // }
 
   // return React.createElement(
   //   'div',
@@ -60,7 +60,7 @@ const App = () => {
     <div>
       <h2>Let's get started!</h2>
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <Expenses onSetYear={setYearHandler} items={ExpensesItems} />
+      <Expenses  items={ExpensesItems} />
     </div>
   );
 }
